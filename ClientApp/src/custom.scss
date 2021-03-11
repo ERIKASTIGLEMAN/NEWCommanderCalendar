@@ -1,3 +1,5 @@
+@import 'react-big-calendar/lib/sass/styles';
+
 :root {
   font: 16px / 1 sans-serif;
 }
@@ -7,6 +9,6 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 2rem;
   min-height: 100%;
 }
