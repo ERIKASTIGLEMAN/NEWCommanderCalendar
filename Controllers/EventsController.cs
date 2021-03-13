@@ -35,7 +35,7 @@ namespace NEWCommanderCalendar.Controllers
         {
             // Uses the database context in `_context` to request all of the Events, sort
             // them by row id and return them as a JSON array.
-            return await _context.Events.OrderBy(row => row.Id).ToListAsync();
+            return await _context.Events.OrderBy(row => row.id).ToListAsync();
         }
 
         // GET: api/Events/5
