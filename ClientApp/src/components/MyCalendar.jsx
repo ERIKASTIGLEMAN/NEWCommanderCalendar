@@ -13,7 +13,6 @@ export function MyCalendar(props) {
         endAccessor="end"
         style={{ height: 1000 }}
       />
-      <footer>HELLO</footer>
     </div>
   )
 }
