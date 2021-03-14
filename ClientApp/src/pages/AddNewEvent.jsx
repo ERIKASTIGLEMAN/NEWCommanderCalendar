@@ -54,9 +54,10 @@ export function AddNewEvent() {
           <input name="tags" type="radio" value="green" />
           <input name="tags" type="radio" value="blue" />
         </section>
-        <div id="img">
-          <img src=\pictures\EventDatePicker.jpg />
-        </div>          
+        <section id="img">
+          <img src="pictures\EventDatePicker.jpg" />
+        </section>
+
         <div id="url">URL</div>
         <section id="notes">
           <p>Notes</p>
