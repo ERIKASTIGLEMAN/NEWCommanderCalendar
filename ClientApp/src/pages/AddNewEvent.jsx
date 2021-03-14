@@ -5,21 +5,23 @@ export function AddNewEvent() {
     <div className="AddNewEvent">
       <header className="newEvent">
         <button>X</button>
-        <h1>Create A Life Altering Decision...</h1>
+        <h1>New Event</h1>
       </header>
+      <br></br>
       <main>
-        <input className="eventName" />
-        <section>
+        <input
+          type="text"
+          className="eventName"
+          placeholder="Create a life altering event..."
+        />
+        <section id="all-day">
           <p>All DAY</p>
-          <label className="newEventSwitch">
+          <label className="switch">
             <input type="checkbox" />
-            <span>
-              <span>OFF</span>
-              <span>ON</span>
-            </span>
+            <span className="slider round"></span>
           </label>
         </section>
-        <section>
+        <section id="starts">
           <p>Starts</p>
           <label className="StartDate">
             <img src="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
@@ -32,10 +34,10 @@ export function AddNewEvent() {
             />
           </label>
         </section>
-        <section>
+        <section id="ends">
+          <p>ENDS</p>
           <label className="EndDate">
-            <p>ENDS</p>
-            <img src="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
+            <img http="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
             <input
               type="time"
               id="timeOfEvent"
@@ -45,20 +47,22 @@ export function AddNewEvent() {
             />
           </label>
         </section>
-        <section>
-          {/* <label htmlFor="tags">ColorTag</label>
-          <input name="tags" type="radio" value="red" /> */}
-
-          <div>Img</div>
-          <div>URL</div>
+        <section id="color">
+          <label htmlFor="tags">ColorTag</label>
+          <input name="tags" type="radio" value="red" />
+          <input name="tags" type="radio" value="yellow" />
+          <input name="tags" type="radio" value="green" />
+          <input name="tags" type="radio" value="blue" />
         </section>
-        <section>
+        <div id="img">Img</div>
+        <div id="url">URL</div>
+        <section id="notes">
           <p>Notes</p>
           <input type="text" />
         </section>
       </main>
       <footer>
-        <button className="newEventSave">SAVE</button>
+        <button id="Save">SAVE</button>
       </footer>
     </div>
   )
