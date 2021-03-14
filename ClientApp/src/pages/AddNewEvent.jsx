@@ -1,6 +1,87 @@
-import React from 'react'
+import React { useState } from 'react';
+// import EventDatePicker from '../pictures/EventDatePicker.jpg'
 
 export function AddNewEvent() {
+  const [addNewEvent, setAddNewEvent] = useState([
+    {
+      id: 13,
+      eventName: 'Dogs to Groomers',
+      dateOfEvent: 'March 28,2021',
+      timeOfEvent: '10:00am',
+      typeOfEvent: 'Daily',
+      colorTag: 'Yellow',
+      image: 'png',
+      url: 'url',
+      notes: 'Do not forget leashes',
+    },
+    {
+      id: 14,
+      eventName: 'VolleyBall Practice',
+      dateOfEvent: 'March 18,2021',
+      timeOfEvent: '6:30pm',
+      typeOfEvent: 'Daily',
+      colorTag: 'Green',
+      image: 'png',
+      url: 'url',
+      notes: 'Volunteer Hours Due',
+    },
+    {
+      id: 15,
+      eventName: 'Tennis Practice',
+      dateOfEvent: 'March 21,2021',
+      timeOfEvent: '5:00pm',
+      typeOfEvent: 'Daily',
+      colorTag: 'Green',
+      image: 'png',
+      url: 'url',
+      notes: 'Set up additional lessons',
+    },
+    {
+      id: 16,
+      eventName: 'No School',
+      dateOfEvent: 'March 27,2021',
+      timeOfEvent: 'ALL DAY',
+      typeOfEvent: 'Daily',
+      colorTag: 'Green',
+      image: 'png',
+      url: 'url',
+      notes: 'Teacher Conferences',
+    },
+    {
+      id: 17,
+      eventName: 'St Paddys Day',
+      dateOfEvent: 'March 17,2021',
+      timeOfEvent: 'time null',
+      typeOfEvent: 'Holiday',
+      colorTag: 'Red',
+      image: 'png',
+      url: 'url',
+      notes: 'null',
+    },
+    {
+      id: 18,
+      eventName: 'Lightening vs Red Wings',
+      dateOfEvent: 'March 30,2021',
+      timeOfEvent: '7:30pm',
+      typeOfEvent: 'Sport',
+      colorTag: 'Blue',
+      image: 'png',
+      url: 'url',
+      notes: 'grab jersey for gift',
+    },
+    {
+      id: 19,
+      eventName: 'Weather',
+      dateOfEvent: 'each day',
+      timeOfEvent: 'time null',
+      typeOfEvent: 'Weather',
+      colorTag: 'null',
+      image: 'png',
+      url: 'url',
+      notes: 'null',
+    },
+  ])
+
   return (
     <div className="AddNewEvent">
       <header className="newEvent">
