@@ -1,5 +1,6 @@
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
+// @ts-ignore
 import eventList from '../pages/fakedata.json'
 import { useEffect, useState } from 'react'
 

@@ -57,21 +57,22 @@ export function AddNewEvent() {
             />
           </label>
         </section>
-        <section id="color">
+        <p>Type of Event</p>
+        <select>Daily, Holiday, Sports</select>
+        {/* <section id="color">
           <label htmlFor="tags">ColorTag</label>
           <input name="tags" type="radio" value="red" />
           <input name="tags" type="radio" value="yellow" />
           <input name="tags" type="radio" value="green" />
           <input name="tags" type="radio" value="blue" />
-        </section>
+        </section> */}
         <section id="img">
-          <img src="pictures\EventDatePicker.jpg" />
+          <img src=".../pictures/EventDatePicker.jpg" alt="logo" />
+          <a href="url">link text</a>
         </section>
 
-        <div id="url">URL</div>
         <section id="notes">
-          <p>Notes</p>
-          <input type="text" />
+          <textarea>Notes</textarea>
         </section>
       </main>
       <footer>

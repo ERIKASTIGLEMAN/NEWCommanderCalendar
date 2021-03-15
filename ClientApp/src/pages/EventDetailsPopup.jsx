@@ -2,8 +2,8 @@ import React from 'react'
 
 export function EventDetailsPopup() {
   return (
-    <div className="EventDetailsPopup">
-      <header>
+    <div id="EventDetailsPopup">
+      <header className="EventDetailsPopup">
         <button>X</button>
         <button>Edit</button>
       </header>
