@@ -1,7 +1,7 @@
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 // @ts-ignore
-import eventList from '../pages/fakedata.json'
+
 import { useEffect, useState } from 'react'
 
 const localizer = momentLocalizer(moment)
@@ -21,7 +21,7 @@ export function MyCalendar(props) {
   }, [])
 
   function handleSelectEvent(calendarEvent, browserEvent) {
-    console.log(calendarEvent)
+    window.location.href = 'http://localhost:5000/eventdetailspopup'
   }
 
   return (
