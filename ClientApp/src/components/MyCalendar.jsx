@@ -18,6 +18,7 @@ export function MyCalendar(props) {
     }
     fetchData()
   }, [])
+
   function handleSelectEvent(calendarEvent, browserEvent) {
     console.log(calendarEvent)
   }
