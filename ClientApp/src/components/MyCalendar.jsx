@@ -18,15 +18,20 @@ export function MyCalendar(props) {
     }
     fetchData()
   }, [])
+  function handleSelectEvent(calendarEvent, browserEvent) {
+    console.log(calendarEvent)
+  }
 
   return (
     <div>
       <Calendar
         localizer={localizer}
         events={eventList}
-        startAccessor="start"
-        endAccessor="end"
+        startAccessor="eventDateTime"
+        endAccessor="eventDateTime"
+        titleAccessor="eventName"
         style={{ height: 1000 }}
+        onSelectEvent={handleSelectEvent}
       />
     </div>
   )
