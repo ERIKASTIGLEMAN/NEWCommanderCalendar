@@ -30,10 +30,15 @@ export function EventDetailsPopup() {
 
       {eventDetails.map(function (eventDetail) {
         return (
-          <body key={eventDetail.id}>
-            <h1>{eventDetail.eventName}</h1>
-            <span>{eventDetail.eventDateTime}</span>
+          <body key={eventDetail.id} className="eventDetail">
+            <h1 id="detail-name">{eventDetail.eventName}</h1>
+            <h5>Date/Time</h5>
+            <p>{eventDetail.eventDateTime}</p>
+
+            <h5>Event Type:</h5>
             <p>{eventDetail.typeOfEvent}</p>
+
+            <h5> Notes:</h5>
             <p> {eventDetail.notes}</p>
             <img src="../pictures/bolt.png" alt="Logo" />
             <a href="url">link text</a>

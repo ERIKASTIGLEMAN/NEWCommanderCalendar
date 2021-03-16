@@ -5,6 +5,7 @@ import moment from 'moment'
 import { useEffect, useState } from 'react'
 
 const localizer = momentLocalizer(moment)
+// const formatLocalizer = moment().format("ddd,MMM D YYYY, h:m A");
 
 export function MyCalendar(props) {
   // make a useState

@@ -193,8 +193,19 @@ footer {
 
 // EventDetails Popup
 
-// .eventdetailspopup {
-//   display: flex;
-//   flex-direction: column;
-//   align-content: space-between;
-// }
+#detail-name {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.eventDetail {
+  margin-top: 2rem;
+}
+
+.EventDetailsPopup {
+  margin: 10px;
+}
+.EventDetailsPopup button {
+  margin: 2px;
+  border-radius: 10px;
+}
