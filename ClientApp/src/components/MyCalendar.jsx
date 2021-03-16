@@ -1,13 +1,15 @@
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
-// @ts-ignore
 
 import { useEffect, useState } from 'react'
+import React from 'react'
+import { Link, useHistory } from 'react-router-dom'
 
 const localizer = momentLocalizer(moment)
-// const formatLocalizer = moment().format("ddd,MMM D YYYY, h:m A");
 
 export function MyCalendar(props) {
+  const history = useHistory()
+
   // make a useState
   const [eventList, setEventList] = useState([])
 
@@ -22,11 +24,20 @@ export function MyCalendar(props) {
   }, [])
 
   function handleSelectEvent(calendarEvent, browserEvent) {
-    window.location.href = 'http://localhost:5000/eventdetailspopup'
+    history.push(`/eventdetailspopup/${calendarEvent.id}`)
   }
 
   return (
     <div>
+      {/* <ul>
+        {eventList.map(function (event) {
+          return (
+            <li>
+              <Link to="/eventdetailspopup">{event.eventName}</Link>
+            </li>
+          )
+        })}
+      </ul> */}
       <Calendar
         localizer={localizer}
         events={eventList}
