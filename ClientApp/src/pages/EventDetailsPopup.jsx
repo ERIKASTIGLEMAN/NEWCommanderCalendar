@@ -2,6 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import format from 'date-fns/format'
 
 export function EventDetailsPopup() {
   const [eventDetails, setEventDetails] = useState([])
@@ -18,7 +19,7 @@ export function EventDetailsPopup() {
 
   return (
     <div id="EventDetailsPopup">
-      <header className="EventDetailsPopup">
+      <header className="EventDetailPopup">
         <button>
           <Link to="/">X</Link>
         </button>

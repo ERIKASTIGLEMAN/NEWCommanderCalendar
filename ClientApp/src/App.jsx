@@ -16,7 +16,7 @@ export function App() {
         <AddNewEvent />
       </Route>
 
-      <Route exact path="/eventdetailspopup">
+      <Route exact path="/eventdetailspopup/:id">
         <EventDetailsPopup />
       </Route>
     </Switch>

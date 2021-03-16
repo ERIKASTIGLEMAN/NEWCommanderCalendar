@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import format from 'date-fns/format'
+
 // import EventDatePicker from '../pictures/EventDatePicker.jpg'
 
 export function AddNewEvent() {
   // const [newEvents, setNewEvents] = useState()
+
+  const dateFormat = 'EEEE, MMM d, yyyy, h:m a..aa'
 
   return (
     <div className="AddNewEvent">
@@ -38,16 +42,13 @@ export function AddNewEvent() {
           <p>Starts</p>
           <label className="StartDate">
             <img src="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
-            <input
-              type="time"
-              id="timeOfEvent"
-              min="1:00"
-              max="23:59"
-              required
-            />
+
+            <input type="time" id="timeOfEvent" min="1:00" max="23:59" required>
+              <time>{format(new Date(), dateFormat)}</time>
+            </input>
           </label>
         </section>
-        <section id="ends">
+        {/* <section id="ends">
           <p>ENDS</p>
           <label className="EndDate">
             <img http="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
@@ -59,7 +60,7 @@ export function AddNewEvent() {
               required
             />
           </label>
-        </section>
+        </section> */}
         <p>Type of Event</p>
         <select>Daily, Holiday, Sports</select>
         {/* <section id="color">

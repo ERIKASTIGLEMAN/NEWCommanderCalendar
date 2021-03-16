@@ -28,8 +28,6 @@ body {
 blockquote {
   padding-top: 2rem;
   text-align: center;
-
-  // transform-origin: center;
 }
 
 .rbc-toolbar-label {
@@ -47,6 +45,7 @@ a {
   font-weight: 500;
 }
 .rbc-header {
+  height: 50px;
   font-family: 'Architects Daughter', cursive;
   border-radius: 25px;
   background-color: rgba(96, 125, 255, 0.795);
@@ -60,7 +59,7 @@ a {
   color: white;
 }
 .rbc-off-range-bg {
-  background-color: rgba(96, 125, 255, 0.795);
+  background-color: rgba(126, 124, 248, 0.637);
 }
 .rbc-date-cell .a,
 .rbc-off-range {
