@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 // import EventDatePicker from '../pictures/EventDatePicker.jpg'
 
 export function AddNewEvent() {
@@ -7,7 +8,9 @@ export function AddNewEvent() {
   return (
     <div className="AddNewEvent">
       <header className="newEvent">
-        <button>X</button>
+        <button>
+          <Link to="/">X</Link>
+        </button>
         <h1>New Event</h1>
       </header>
       <br></br>
