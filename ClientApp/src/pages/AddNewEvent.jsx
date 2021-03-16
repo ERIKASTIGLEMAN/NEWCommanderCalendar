@@ -42,16 +42,6 @@ export function AddNewEvent() {
           <p>Starts</p>
           <label className="StartDate">
             <img src="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
-
-            <input type="time" id="timeOfEvent" min="1:00" max="23:59" required>
-              <time>{format(new Date(), dateFormat)}</time>
-            </input>
-          </label>
-        </section>
-        {/* <section id="ends">
-          <p>ENDS</p>
-          <label className="EndDate">
-            <img http="EventDatePicker.jpg" alt="Monthly Calendar Dates" />
             <input
               type="time"
               id="timeOfEvent"
@@ -60,16 +50,11 @@ export function AddNewEvent() {
               required
             />
           </label>
-        </section> */}
+        </section>
+
         <p>Type of Event</p>
         <select>Daily, Holiday, Sports</select>
-        {/* <section id="color">
-          <label htmlFor="tags">ColorTag</label>
-          <input name="tags" type="radio" value="red" />
-          <input name="tags" type="radio" value="yellow" />
-          <input name="tags" type="radio" value="green" />
-          <input name="tags" type="radio" value="blue" />
-        </section> */}
+
         <section id="img">
           <img src=".../pictures/EventDatePicker.jpg" alt="logo" />
           <a href="url">link text</a>
