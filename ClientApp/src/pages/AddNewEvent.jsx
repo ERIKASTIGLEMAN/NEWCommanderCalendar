@@ -52,7 +52,15 @@ export function AddNewEvent() {
           onChange={handleAllFieldChanges}
         />
 
-        <label id="AllDayEvent">All DAY</label>
+        <h3 id="AllDayEvent">All DAY</h3>
+        <p className="Y">
+          <label htmlFor="Y">YES</label>
+          <input type="radio" />
+        </p>
+        <p>
+          <label htmlFor="N">NO</label>
+          <input type="radio" />
+        </p>
 
         <label id="StartTime">Starts</label>
 
