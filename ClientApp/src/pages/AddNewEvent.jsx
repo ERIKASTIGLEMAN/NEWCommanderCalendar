@@ -22,6 +22,17 @@ export function AddNewEvent() {
     setNewEvent(updatedEvent)
   }
 
+  async function handleFormSubmit(event) {
+    event.preventDefault()
+    const response = await fetch('/api/Events', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newEvent),
+    })
+
+    const json = await response.json()
+    console.log(json)
+  }
   return (
     <div className="AddNewEvent">
       <header className="newEvent">
@@ -31,7 +42,7 @@ export function AddNewEvent() {
         <h1>New Event</h1>
       </header>
       <br></br>
-      <form>
+      <form action="#" onSubmit={handleFormSubmit}>
         <input
           id="NewEventh1"
           type="text"
@@ -61,7 +72,7 @@ export function AddNewEvent() {
           max="23:59"
           value={newEvent.eventDate}
           onChange={handleAllFieldChanges}
-          required
+          // required
         />
 
         <label id="Type Of Event">Type of Event</label>
@@ -70,7 +81,9 @@ export function AddNewEvent() {
           value={newEvent.typeOfEvent}
           onChange={handleAllFieldChanges}
         >
-          Daily, Holiday, Sports
+          <option value="Daily">Daily</option>
+          <option value="Sports">Sports</option>
+          <option value="Holiday">Holiday</option>
         </select>
 
         <label id="notes">Notes</label>
@@ -81,7 +94,7 @@ export function AddNewEvent() {
         ></textarea>
 
         <label id="save">
-          <button>SAVE</button>
+          <input type="submit" value="SAVE" />
         </label>
       </form>
     </div>

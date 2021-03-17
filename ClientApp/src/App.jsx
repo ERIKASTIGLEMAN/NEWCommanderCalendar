@@ -2,7 +2,7 @@ import React from 'react'
 import './custom.scss'
 import { Route, Switch } from 'react-router-dom'
 import { MonthlyCalendarPages } from './pages/MonthlyCalendarPages'
-import { AddNewEvent } from './pages/NewEvent'
+import { AddNewEvent } from './pages/AddNewEvent'
 import { EventDetailsPopup } from './pages/EventDetailsPopup'
 
 export function App() {
