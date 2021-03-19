@@ -10,7 +10,7 @@ import { format } from 'date-fns'
 export function AddNewEvent() {
   const [newEvent, setNewEvent] = useState({
     eventName: '',
-    eventDate: '',
+    eventDate: null,
     typeOfEvent: '',
     notes: '',
   })
@@ -56,7 +56,7 @@ export function AddNewEvent() {
       </header>
       <br></br>
       <form>
-        <p className="error">{errorMessage}</p>
+        {errorMessage === '' ? '' : <p className="error">{errorMessage}</p>}
         <input
           id="NewEventh1"
           type="text"
@@ -78,7 +78,7 @@ export function AddNewEvent() {
 
         <label id="StartTime">Starts</label>
 
-        <label id="StartDate" />
+        {/* <label id="StartDate" /> */}
         {/* <input
           type="image"
           src="EventDatePicker.jpg"
