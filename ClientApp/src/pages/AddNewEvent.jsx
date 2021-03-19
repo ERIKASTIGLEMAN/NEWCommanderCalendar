@@ -15,6 +15,8 @@ export function AddNewEvent() {
     notes: '',
   })
 
+  const [errorMessage, setErrorMessage] = useState('')
+
   const history = useHistory()
 
   function handleAllFieldChanges(event) {
@@ -36,8 +38,12 @@ export function AddNewEvent() {
     })
 
     const json = await response.json()
-    console.log(json)
-    history.push('/')
+
+    if (response.status === 400) {
+      setErrorMessage(Object.values(json.errors).join(' '))
+    } else {
+      history.push('/')
+    }
   }
 
   return (
@@ -50,6 +56,7 @@ export function AddNewEvent() {
       </header>
       <br></br>
       <form>
+        <p className="error">{errorMessage}</p>
         <input
           id="NewEventh1"
           type="text"
@@ -85,7 +92,6 @@ export function AddNewEvent() {
           name="eventDate"
           value={newEvent.eventDate}
           onChange={handleAllFieldChanges}
-          // required
         />
 
         <label id="Type Of Event">Type of Event</label>
