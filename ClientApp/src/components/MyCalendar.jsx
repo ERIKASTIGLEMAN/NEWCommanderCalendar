@@ -30,15 +30,6 @@ export function MyCalendar(props) {
 
   return (
     <div>
-      {/* <ul>
-        {eventList.map(function (event) {
-          return (
-            <li>
-              <Link to="/eventdetailspopup">{event.eventName}</Link>
-            </li>
-          )
-        })}
-      </ul> */}
       <Calendar
         localizer={localizer}
         events={eventList}

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { format } from 'date-fns'
 
 // import EventDatePicker from '../pictures/EventDatePicker.jpg'
@@ -15,6 +15,8 @@ export function AddNewEvent() {
     notes: '',
   })
 
+  const history = useHistory()
+
   function handleAllFieldChanges(event) {
     const value = event.target.value
     const fieldName = event.target.name
@@ -26,6 +28,7 @@ export function AddNewEvent() {
 
   async function handleFormSubmit(event) {
     event.preventDefault()
+
     const response = await fetch('/api/Events', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -34,7 +37,9 @@ export function AddNewEvent() {
 
     const json = await response.json()
     console.log(json)
+    history.push('/')
   }
+
   return (
     <div className="AddNewEvent">
       <header className="newEvent">
@@ -44,7 +49,7 @@ export function AddNewEvent() {
         <h1>New Event</h1>
       </header>
       <br></br>
-      <form action="#" onSubmit={handleFormSubmit}>
+      <form>
         <input
           id="NewEventh1"
           type="text"
@@ -54,7 +59,7 @@ export function AddNewEvent() {
           onChange={handleAllFieldChanges}
         />
 
-        <h3 id="AllDayEvent">All DAY</h3>
+        {/* <h3 id="AllDayEvent">All DAY</h3>
         <p className="Y">
           <label htmlFor="Y">YES</label>
           <input type="radio" />
@@ -62,7 +67,7 @@ export function AddNewEvent() {
         <p>
           <label htmlFor="N">NO</label>
           <input type="radio" />
-        </p>
+        </p> */}
 
         <label id="StartTime">Starts</label>
 
@@ -101,9 +106,8 @@ export function AddNewEvent() {
           onChange={handleAllFieldChanges}
         ></textarea>
 
-        <label id="save">
-          <input type="submit" value="SAVE" />
-        </label>
+        <label id="save" />
+        <button onClick={handleFormSubmit}>SAVE</button>
       </form>
     </div>
   )

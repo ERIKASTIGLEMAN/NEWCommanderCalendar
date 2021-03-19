@@ -15,8 +15,6 @@ export function MonthlyCalendarPages() {
         </blockquote>
       </header>
       <MyCalendar />
-
-      {/* Need to add button to toolbar to create newEvent */}
     </>
   )
 }
