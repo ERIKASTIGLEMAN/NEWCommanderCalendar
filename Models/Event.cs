@@ -7,9 +7,10 @@ namespace NEWCommanderCalendar.Models
     {
         public int id {get; set;}
 
-        [Required]
+        [Required]     
         public string EventName {get; set;}
-       [Required]
+        
+         [Required]
         public DateTime EventDateTime {get; set;}
         public string TypeOfEvent {get; set;}
         public string ColorTag {get; set;}
