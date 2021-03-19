@@ -1,12 +1,15 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace NEWCommanderCalendar.Models
 {
     public class Event
     {
         public int id {get; set;}
+
+        [Required]
         public string EventName {get; set;}
-       
+       [Required]
         public DateTime EventDateTime {get; set;}
         public string TypeOfEvent {get; set;}
         public string ColorTag {get; set;}
