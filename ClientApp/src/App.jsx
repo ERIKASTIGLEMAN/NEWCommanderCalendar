@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom'
 import { MonthlyCalendarPages } from './pages/MonthlyCalendarPages'
 import { AddNewEvent } from './pages/AddNewEvent'
 import { EventDetailsPopup } from './pages/EventDetailsPopup'
+import { EditEvent } from './pages/EditEvent'
 
 export function App() {
   return (
@@ -18,6 +19,10 @@ export function App() {
 
       <Route exact path="/eventdetailspopup/:id">
         <EventDetailsPopup />
+      </Route>
+
+      <Route exact path="/editevent/:id/edit">
+        <EditEvent />
       </Route>
     </Switch>
   )

@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useParams } from 'react-router'
+import format from 'date-fns/format'
 
 export function EventDetailsPopup() {
   const history = useHistory()
@@ -14,7 +15,6 @@ export function EventDetailsPopup() {
     notes: '',
   })
   const id = params.id
-
   useEffect(() => {
     async function fetchEvent() {
       const response = await fetch(`/api/Events/${id}`)
@@ -36,14 +36,17 @@ export function EventDetailsPopup() {
       history.push('/')
     }
   }
-  // function handleEditEvent(event){
-  //   event.preventDefault()
+  async function handleEditEvent(event) {
+    event.preventDefault()
 
-  //   const response = await fetch(`/api/Events`,{
-  //     method: 'GET',
-  //     headers: { 'content-type': 'application/json' },
-  //     body: JSON.stringify(eventDetails),
-  //   })
+    const response = await fetch(`/api/Events/${id}`, {
+      method: 'GET',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(eventDetails),
+    })
+  }
+
+  const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 
   return (
     <div id="EventDetailsPopup">
@@ -51,15 +54,15 @@ export function EventDetailsPopup() {
         <button>
           <Link to="/">X</Link>
         </button>
-
         <button>
-          <Link to="/addnewevent">Edit</Link>
+          <Link to="">Edit</Link>
         </button>
         <button onClick={handleDeleteEvent}>Delete</button>
       </header>
+
       <h1 id="detail-name">{eventDetails.eventName}</h1>
       <h5>Date/Time</h5>
-      <p>{eventDetails.eventDateTime}</p>
+      <p>{format(new Date(eventDetails.eventDateTime), dateFormat)}</p>
 
       <h5>Event Type:</h5>
       <p>{eventDetails.typeOfEvent}</p>
