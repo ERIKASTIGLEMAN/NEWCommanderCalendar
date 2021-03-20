@@ -1,10 +1,11 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useParams } from 'react-router'
 
 export function EventDetailsPopup() {
+  const history = useHistory()
   const params = useParams()
   const [eventDetails, setEventDetails] = useState({
     eventName: '',
@@ -24,6 +25,17 @@ export function EventDetailsPopup() {
     fetchEvent()
   }, [id])
 
+  async function handleDeleteEvent(event) {
+    event.preventDefault()
+
+    const response = await fetch(`/api/Events/${id}`, {
+      method: 'DELETE',
+      headers: { 'content-type': 'application/json' },
+    })
+    if (response.status === 200 || response.status === 204) {
+      history.push('/')
+    }
+  }
   // function handleEditEvent(event){
   //   event.preventDefault()
 
@@ -32,8 +44,6 @@ export function EventDetailsPopup() {
   //     headers: { 'content-type': 'application/json' },
   //     body: JSON.stringify(eventDetails),
   //   })
-
-  }
 
   return (
     <div id="EventDetailsPopup">
@@ -45,9 +55,7 @@ export function EventDetailsPopup() {
         <button>
           <Link to="/addnewevent">Edit</Link>
         </button>
-        <button>
-          <Link to="/addnewevent">Delete</Link>
-        </button>
+        <button onClick={handleDeleteEvent}>Delete</button>
       </header>
       <h1 id="detail-name">{eventDetails.eventName}</h1>
       <h5>Date/Time</h5>
