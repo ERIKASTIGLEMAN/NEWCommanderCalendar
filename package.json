@@ -1,4 +1,7 @@
 {
   "name": "NEWCommanderCalendar",
-  "private": "true"
+  "private": "true",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
 }

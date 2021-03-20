@@ -1,9 +1,10 @@
-import { Calendar, Day, momentLocalizer } from 'react-big-calendar'
-// import BigCalendar from 'react-big-calendar'
+import { Calendar, momentLocalizer } from 'react-big-calendar'
 import moment from 'moment'
 import { useEffect, useState } from 'react'
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+
+// dateFormat: 'dddd, MMMM Do YYYY, h:mm: a',
 
 const localizer = momentLocalizer(moment)
 
@@ -38,6 +39,8 @@ export function MyCalendar(props) {
         titleAccessor="eventName"
         style={{ height: 1000 }}
         onSelectEvent={handleSelectEvent}
+        // onChange={onChange}
+        // value={date}
       />
     </div>
   )

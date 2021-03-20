@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { format } from 'date-fns'
+import Calendar from 'react-calendar'
 
 // import EventDatePicker from '../pictures/EventDatePicker.jpg'
 
@@ -42,6 +42,7 @@ export function AddNewEvent() {
       history.push('/')
     }
   }
+  // const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 
   return (
     <div className="AddNewEvent">
@@ -74,21 +75,11 @@ export function AddNewEvent() {
         </p> */}
 
         <label id="StartTime">Starts</label>
-
-        {/* <label id="StartDate" /> */}
-        {/* <input
-          type="image"
-          src="EventDatePicker.jpg"
-          alt="Monthly Calendar Dates"
-          name="eventDateTime"
-          value={format(newEvent.eventDateTime, 'EEEE, MMM d, yyyy, h:m a..aa')}
-          onChange={handleAllFieldChanges}
-        /> */}
         <input
           type="datetime-local"
+          // dateFormat={dateFormat}
           name="eventDateTime"
           value={newEvent.eventDateTime}
-          onChange={handleAllFieldChanges}
         />
 
         <label id="Type Of Event">Type of Event</label>
