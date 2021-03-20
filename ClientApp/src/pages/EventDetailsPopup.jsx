@@ -2,20 +2,27 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import format from 'date-fns/format'
+import { useParams } from 'react-router'
 
 export function EventDetailsPopup() {
-  const [eventDetails, setEventDetails] = useState([])
+  const params = useParams()
+  const [eventDetails, setEventDetails] = useState({
+    eventName: '',
+    eventDateTime: '',
+    typeOfEvent: '',
+    notes: '',
+  })
+  const id = params.id
 
-  useEffect(function () {
-    async function fetchData() {
-      const response = await fetch('api/Events')
-      const json = await response.json()
+  useEffect(() => {
+    async function fetchEvent() {
+      const response = await fetch(`/api/Events/${id}`)
+      const apiData = await response.json()
 
-      setEventDetails(json)
+      setEventDetails(apiData)
     }
-    fetchData()
-  }, [])
+    fetchEvent()
+  }, [id])
 
   return (
     <div id="EventDetailsPopup">
@@ -28,24 +35,17 @@ export function EventDetailsPopup() {
           <Link to="/addnewevent">Edit</Link>
         </button>
       </header>
+      <h1 id="detail-name">{eventDetails.eventName}</h1>
+      <h5>Date/Time</h5>
+      <p>{eventDetails.eventDateTime}</p>
 
-      {eventDetails.map(function (eventDetail) {
-        return (
-          <body key={eventDetail.id} className="eventDetail">
-            <h1 id="detail-name">{eventDetail.eventName}</h1>
-            <h5>Date/Time</h5>
-            <p>{eventDetail.eventDateTime}</p>
+      <h5>Event Type:</h5>
+      <p>{eventDetails.typeOfEvent}</p>
 
-            <h5>Event Type:</h5>
-            <p>{eventDetail.typeOfEvent}</p>
-
-            <h5> Notes:</h5>
-            <p> {eventDetail.notes}</p>
-            <img src="../pictures/bolt.png" alt="Logo" />
-            <a href="url">link text</a>
-          </body>
-        )
-      })}
+      <h5> Notes:</h5>
+      <p> {eventDetails.notes}</p>
+      <img src="../pictures/bolt.png" alt="Logo" />
+      <a href="url">link text</a>
     </div>
   )
 }

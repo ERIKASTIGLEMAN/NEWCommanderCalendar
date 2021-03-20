@@ -3,14 +3,11 @@ import { Link, useHistory } from 'react-router-dom'
 import { format } from 'date-fns'
 
 // import EventDatePicker from '../pictures/EventDatePicker.jpg'
-// const dateFormat = format(eventDate, 'EEEE, MMM d, yyyy, h:m a..aa')
-
-// console.log(dateFormat)
 
 export function AddNewEvent() {
   const [newEvent, setNewEvent] = useState({
     eventName: '',
-    eventDate: null,
+    eventDateTime: '',
     typeOfEvent: '',
     notes: '',
   })
@@ -83,14 +80,14 @@ export function AddNewEvent() {
           type="image"
           src="EventDatePicker.jpg"
           alt="Monthly Calendar Dates"
-          name="eventDate"
-          value={format(newEvent.eventDate, 'EEEE, MMM d, yyyy, h:m a..aa')}
+          name="eventDateTime"
+          value={format(newEvent.eventDateTime, 'EEEE, MMM d, yyyy, h:m a..aa')}
           onChange={handleAllFieldChanges}
         /> */}
         <input
           type="datetime-local"
-          name="eventDate"
-          value={newEvent.eventDate}
+          name="eventDateTime"
+          value={newEvent.eventDateTime}
           onChange={handleAllFieldChanges}
         />
 
