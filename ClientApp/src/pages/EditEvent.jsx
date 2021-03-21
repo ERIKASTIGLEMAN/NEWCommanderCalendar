@@ -7,7 +7,7 @@ import { useParams } from 'react-router'
 export function EditEvent() {
   const params = useParams()
   const id = params.id
-  const [errorMessage, setErrorMessage] = useState('')
+  const [errorMessage, setErrorMessage] = useState()
   const history = useHistory()
 
   const [newEvent, setNewEvent] = useState({
@@ -39,24 +39,24 @@ export function EditEvent() {
   async function handleFormSubmit(event) {
     event.preventDefault()
 
-    const response = await fetch('/api/Events', {
-      method: 'POST',
+    const response = await fetch(`/api/Events/${id}`, {
+      method: 'PUT',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newEvent),
     })
 
-    const json = await response.json()
-
     if (response.status === 400) {
+      const json = await response.json()
+
       setErrorMessage(Object.values(json.errors).join(' '))
     } else {
       history.push('/')
     }
   }
 
-  if (!Event.id) {
-    return <></>
-  }
+  // if (!Event.id) {
+  //   return <></>
+  // }
 
   return (
     <div className="EditEvent">
@@ -67,7 +67,7 @@ export function EditEvent() {
         <h1>New Event</h1>
       </header>
       <br></br>
-      <form>
+      <form className="edit">
         {errorMessage === '' ? '' : <p className="error">{errorMessage}</p>}
         <input
           id="NewEventh1"

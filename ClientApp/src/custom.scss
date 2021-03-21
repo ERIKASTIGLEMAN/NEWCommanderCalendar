@@ -3,11 +3,9 @@
 :root {
   font: 16px / 1 sans-serif;
 }
-
 html {
   height: 100%;
 }
-
 body {
   margin: 4rem 2rem;
   min-height: 100%;
@@ -145,4 +143,9 @@ form {
 .editEvent {
   height: 100%;
   padding: 4rem;
+}
+.edit {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }

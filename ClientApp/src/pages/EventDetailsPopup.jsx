@@ -45,7 +45,7 @@ export function EventDetailsPopup() {
           <Link to="/">X</Link>
         </button>
         <button>
-          <Link to="/events/:id/edit">Edit</Link>
+          <Link to={`/events/:${id}/edit`}>Edit</Link>
         </button>
         <button onClick={handleDeleteEvent}>Delete</button>
       </header>
