@@ -3,9 +3,14 @@ import { useEffect } from 'react'
 import { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useParams } from 'react-router'
-import format from 'date-fns/format'
+import { Event } from 'jquery'
 
 export function EditEvent() {
+  const params = useParams()
+  const id = params.id
+  const [errorMessage, setErrorMessage] = useState('')
+  const history = useHistory()
+
   const [newEvent, setNewEvent] = useState({
     eventName: '',
     eventDateTime: '',
@@ -13,10 +18,15 @@ export function EditEvent() {
     notes: '',
   })
 
-  const [errorMessage, setErrorMessage] = useState('')
-  const history = useHistory()
-  const params = useParams()
-  const id = params.id
+  useEffect(() => {
+    async function fetchEvent() {
+      const response = await fetch(`/api/Events/${id}`)
+      const apiData = await response.json()
+
+      setNewEvent(apiData)
+    }
+    fetchEvent()
+  }, [id])
 
   function handleAllFieldChanges(event) {
     const value = event.target.value
@@ -37,42 +47,27 @@ export function EditEvent() {
     })
 
     const json = await response.json()
+
     if (response.status === 400) {
       setErrorMessage(Object.values(json.errors).join(' '))
     } else {
       history.push('/')
     }
+  }
 
-    async function handleEditEvent(event) {
-      event.preventDefault()
-  
-      const response = await fetch(`/api/Events/${id}`, {
-        method: 'GET',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify(eventDetails),
-      })
-    }
-
-  useEffect(() => {
-    async function fetchEvent() {
-      const response = await fetch(`/api/Events/${id}`)
-      const apiData = await response.json()
-
-      setEventDetails(apiData)
-    }
-    fetchEvent()
-  }, [id])
-
-  // const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
+  if (!Event.id) {
+    return <></>
+  }
 
   return (
-    <div>
-      <header className="EditEvent">
+    <div className="EditEvent">
+      <header className="editEvent">
         <button>
           <Link to="/">X</Link>
         </button>
         <h1>New Event</h1>
       </header>
+      <br></br>
       <form>
         {errorMessage === '' ? '' : <p className="error">{errorMessage}</p>}
         <input
@@ -97,6 +92,7 @@ export function EditEvent() {
         <label id="StartTime">Starts</label>
         <input
           type="datetime-local"
+          // dateFormat={dateFormat}
           name="eventDateTime"
           value={newEvent.eventDateTime}
         />
@@ -122,6 +118,6 @@ export function EditEvent() {
         <label id="save" />
         <button onClick={handleFormSubmit}>SAVE</button>
       </form>
-    </div>  
+    </div>
   )
 }
