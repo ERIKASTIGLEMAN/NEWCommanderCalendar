@@ -41,13 +41,19 @@ export function EventDetailsPopup() {
   return (
     <div id="EventDetailsPopup">
       <header className="EventDetailPopup">
-        <button>
-          <Link to="/">X</Link>
+        <button className="home">
+          <Link to="/">
+            <i className="fas fa-home"></i>
+          </Link>
         </button>
-        <button>
-          <Link to={`/events/${id}/edit`}>Edit</Link>
+        <button className="edit">
+          <Link to={`/events/${id}/edit`}>
+            <i className="fas fa-edit"></i>
+          </Link>
         </button>
-        <button onClick={handleDeleteEvent}>Delete</button>
+        <button className="delete" onClick={handleDeleteEvent}>
+          <i className="fas fa-trash-alt"></i>
+        </button>
       </header>
 
       <h1 id="detail-name">{eventDetails.eventName}</h1>

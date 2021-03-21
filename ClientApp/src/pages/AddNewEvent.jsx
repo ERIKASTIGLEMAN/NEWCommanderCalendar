@@ -46,9 +46,10 @@ export function AddNewEvent() {
   return (
     <div className="AddNewEvent">
       <header className="newEvent">
-        <button>
-          <Link to="/">X</Link>
-        </button>
+        <Link to="/">
+          <i className="far fa-times-circle"></i>{' '}
+        </Link>
+
         <h1>New Event</h1>
       </header>
       <br></br>

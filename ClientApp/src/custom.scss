@@ -79,10 +79,13 @@ form {
   display: flex;
 }
 
+.far {
+  font-size: 30px;
+}
+
 .newEvent button {
   width: fit-content;
   height: fit-content;
-  background-color: rgba(96, 125, 255, 0.795);
 }
 .AddNewEvent {
   margin: 10rem;
@@ -138,11 +141,18 @@ form {
   padding: 1rem;
 }
 // EventDetails Popup
+.EventDetailPopup {
+  display: flex;
+}
+.fas {
+  color: blue;
+}
 
 // Edit Event
 .editEventDiv {
   border: 4px coral solid;
   padding: 1rem;
+  background-color: #ccfcee;
 }
 .editEvent {
   display: flex;
@@ -169,4 +179,9 @@ form {
 
   justify-content: center;
   flex-direction: column;
+}
+
+.fa-fa-pencil-square-o {
+  height: fit-content;
+  width: fit-content;
 }
