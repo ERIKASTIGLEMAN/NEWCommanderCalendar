@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import Calendar from 'react-calendar'
 
 // import EventDatePicker from '../pictures/EventDatePicker.jpg'
 
@@ -80,6 +79,7 @@ export function AddNewEvent() {
           // dateFormat={dateFormat}
           name="eventDateTime"
           value={newEvent.eventDateTime}
+          onChange={handleAllFieldChanges}
         />
 
         <label id="Type Of Event">Type of Event</label>
