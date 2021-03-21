@@ -54,23 +54,19 @@ export function EditEvent() {
     }
   }
 
-  // if (!Event.id) {
-  //   return <></>
-  // }
-
   return (
     <div className="EditEvent">
       <header className="editEvent">
         <button>
           <Link to="/">X</Link>
         </button>
-        <h1>New Event</h1>
+        <h1>{newEvent.eventName}</h1>
       </header>
       <br></br>
       <form className="edit">
-        {errorMessage === '' ? '' : <p className="error">{errorMessage}</p>}
+        {errorMessage && <p className="error">{errorMessage}</p>}
         <input
-          id="NewEventh1"
+          id="EditEvent"
           type="text"
           name="eventName"
           placeholder="Create a life altering event..."
@@ -94,6 +90,7 @@ export function EditEvent() {
           // dateFormat={dateFormat}
           name="eventDateTime"
           value={newEvent.eventDateTime}
+          onChange={handleAllFieldChanges}
         />
 
         <label id="Type Of Event">Type of Event</label>

@@ -21,7 +21,7 @@ export function App() {
         <EventDetailsPopup />
       </Route>
 
-      <Route exact path="/editevent/:id/edit">
+      <Route exact path="/events/:id/edit">
         <EditEvent />
       </Route>
     </Switch>
