@@ -55,12 +55,12 @@ export function EditEvent() {
   }
 
   return (
-    <div className="EditEvent">
+    <div className="editEventDiv">
       <header className="editEvent">
-        <button>
+        <button className="editX">
           <Link to="/">X</Link>
         </button>
-        <h1>{newEvent.eventName}</h1>
+        <h1 className="h1edit">{newEvent.eventName}</h1>
       </header>
       <br></br>
       <form className="edit">

@@ -140,12 +140,33 @@ form {
 // EventDetails Popup
 
 // Edit Event
-.editEvent {
-  height: 100%;
-  padding: 4rem;
+.editEventDiv {
+  border: 4px coral solid;
+  padding: 1rem;
 }
+.editEvent {
+  display: flex;
+  justify-content: space-between;
+  height: fit-content;
+}
+
+.editX {
+  height: fit-content;
+  width: fit-content;
+  background-color: cyan;
+  > a {
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+  }
+}
+.h1edit {
+  padding-right: 22rem;
+}
+
 .edit {
   display: flex;
+
   justify-content: center;
   flex-direction: column;
 }
