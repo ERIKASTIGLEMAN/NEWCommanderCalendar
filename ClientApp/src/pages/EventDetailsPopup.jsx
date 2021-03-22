@@ -39,7 +39,7 @@ export function EventDetailsPopup() {
   // const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 
   return (
-    <div>
+    <div className="details">
       <span id="what">
         <section className="Buttons">
           <div className="home">

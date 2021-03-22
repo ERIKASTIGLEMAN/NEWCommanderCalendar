@@ -141,11 +141,20 @@ form {
   padding: 1rem;
 }
 // EventDetails Popup
+.details {
+  // background-image: url('./pictures/lobsterfade.png');
+  // background-repeat: no-repeat;
+}
 #what {
+  background-image: url('./pictures/lobsterfade.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
   display: flex;
   flex-direction: column;
   width: auto;
-  background-color: #ccfcee;
+  height: auto;
+  // background-color: #ccfcee;
   border: #7bd1b8 6px solid;
 }
 
@@ -158,7 +167,9 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem;
+  padding-bottom: 2rem 2rem;
+  background-color: #ccfcee;
+  width: fit-content;
 }
 
 #detail-name {
