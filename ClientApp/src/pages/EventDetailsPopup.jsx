@@ -39,34 +39,39 @@ export function EventDetailsPopup() {
   // const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 
   return (
-    <div id="EventDetailsPopup">
-      <header className="EventDetailPopup">
-        <button className="home">
-          <Link to="/">
-            <i className="fas fa-home"></i>
-          </Link>
-        </button>
-        <button className="edit">
-          <Link to={`/events/${id}/edit`}>
-            <i className="fas fa-edit"></i>
-          </Link>
-        </button>
-        <button className="delete" onClick={handleDeleteEvent}>
-          <i className="fas fa-trash-alt"></i>
-        </button>
-      </header>
+    <div>
+      <span id="what">
+        <section className="Buttons">
+          <div className="home">
+            <Link to="/">
+              <i className="fas fa-home"></i>
+            </Link>
+          </div>
+          <div className="edit">
+            <Link to={`/events/${id}/edit`}>
+              <i className="fas fa-edit"></i>
+            </Link>
+          </div>
+          <div className="delete" onClick={handleDeleteEvent}>
+            <i className="fas fa-trash-alt"></i>
+          </div>
+        </section>
+        <section className="detailsInfo">
+          <h1 id="detail-name">{eventDetails.eventName}</h1>
+          <h4>Date/Time:</h4>
 
-      <h1 id="detail-name">{eventDetails.eventName}</h1>
-      <h5>Date/Time</h5>
-      <p>{eventDetails.eventDateTime}</p>
+          <p>{eventDetails.eventDateTime}</p>
 
-      <h5>Event Type:</h5>
-      <p>{eventDetails.typeOfEvent}</p>
+          <h4>Event Type:</h4>
 
-      <h5> Notes:</h5>
-      <p> {eventDetails.notes}</p>
-      <img src="../pictures/bolt.png" alt="Logo" />
-      <a href="url">link text</a>
+          <p>{eventDetails.typeOfEvent}</p>
+
+          <h4> Notes:</h4>
+          <p className="notes"> {eventDetails.notes}</p>
+          {/* <img src="../pictures/bolt.png" alt="Logo" />
+          <a href="url">link text</a> */}
+        </section>
+      </span>
     </div>
   )
 }
