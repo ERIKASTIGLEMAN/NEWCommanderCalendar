@@ -59,7 +59,7 @@ export function AddNewEvent() {
           id="NewEventh1"
           type="text"
           name="eventName"
-          placeholder="Create a life altering event..."
+          placeholder="Create a life event..."
           value={newEvent.eventName}
           onChange={handleAllFieldChanges}
         />

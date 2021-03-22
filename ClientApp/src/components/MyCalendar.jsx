@@ -18,7 +18,7 @@ export function MyCalendar(props) {
     async function fetchData() {
       const response = await fetch('api/Events')
       const json = await response.json()
-
+      // const jsonDates = await json.map((events) => moment(events).toDate())
       setEventList(json)
     }
 
@@ -38,9 +38,8 @@ export function MyCalendar(props) {
         endAccessor="eventDateTime"
         titleAccessor="eventName"
         style={{ height: 1000 }}
+        views={['month', 'agenda']}
         onSelectEvent={handleSelectEvent}
-        // onChange={onChange}
-        // value={date}
       />
     </div>
   )

@@ -9,6 +9,9 @@ html {
 body {
   margin: 4rem 2rem;
   min-height: 100%;
+  background-image: url('./pictures/lobsterfade.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .monthly-giggles button {
@@ -19,7 +22,6 @@ body {
 }
 .monthly-giggles {
   display: flex;
-
   flex-direction: column;
 }
 
@@ -95,12 +97,6 @@ form {
   max-width: 75%;
   max-height: 100%;
 }
-#all-day {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  padding-top: 2rem;
-}
 
 .eventName {
   height: 0.5in;
@@ -140,40 +136,39 @@ form {
   font-size: x-large;
   padding: 1rem;
 }
-// EventDetails Popup
-.details {
-  // background-image: url('./pictures/lobsterfade.png');
-  // background-repeat: no-repeat;
-}
-#what {
-  background-image: url('./pictures/lobsterfade.png');
-  background-repeat: no-repeat;
-  background-size: contain;
 
+// EventDetailsPopup
+.detailsBrowser {
+  display: flex;
+  justify-content: center;
+}
+
+#details {
   display: flex;
   flex-direction: column;
-  width: auto;
-  height: auto;
-  // background-color: #ccfcee;
-  border: #7bd1b8 6px solid;
+  // padding: 2rem;
+  border: #3e6c61 6px solid;
 }
 
 .Buttons {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem 2rem 0.5rem;
+  background-color: #7bd1b8;
+  padding: 5px;
 }
+
 .detailsInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem 2rem;
+  padding-bottom: 2rem;
   background-color: #ccfcee;
-  width: fit-content;
+  border: #7bd1b8 16px solid;
 }
 
 #detail-name {
   padding: 2rem 0rem 2rem;
+  margin: 0 5rem;
   color: #f85e28;
   text-shadow: 2px 1px 4px #3e6c61;
 }
@@ -243,9 +238,4 @@ p {
 }
 .h1edit {
   padding-right: 22rem;
-}
-
-.fa-fa-pencil-square-o {
-  height: fit-content;
-  width: fit-content;
 }

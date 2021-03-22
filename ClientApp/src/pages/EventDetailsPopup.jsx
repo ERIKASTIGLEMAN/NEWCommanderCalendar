@@ -36,11 +36,9 @@ export function EventDetailsPopup() {
     }
   }
 
-  // const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
-
   return (
-    <div className="details">
-      <span id="what">
+    <div className="detailsBrowser">
+      <span id="details">
         <section className="Buttons">
           <div className="home">
             <Link to="/">
@@ -68,8 +66,6 @@ export function EventDetailsPopup() {
 
           <h4> Notes:</h4>
           <p className="notes"> {eventDetails.notes}</p>
-          {/* <img src="../pictures/bolt.png" alt="Logo" />
-          <a href="url">link text</a> */}
         </section>
       </span>
     </div>
