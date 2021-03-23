@@ -12,22 +12,25 @@ body {
   background-image: url('./pictures/lobsterfade.png');
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 10rem;
 }
 
-.monthly-giggles button {
-  width: 100%;
-  height: 100%;
-  padding: 2rem;
+.addEventBIG {
+  width: 18.5%;
+  border: #e1331b 3px solid;
   border-radius: 20px;
-}
-.monthly-giggles {
-  display: flex;
-  flex-direction: column;
+  background-color: #f85e28;
+  color: aliceblue;
+  font-weight: bolder;
 }
 
-blockquote {
-  padding-top: 2rem;
+#addEventBIG {
   text-align: center;
+  > a {
+    color: whitesmoke;
+    font-weight: bolder;
+    font-family: 'Raleway', sans-serif;
+  }
 }
 
 .rbc-toolbar-label {
@@ -36,8 +39,10 @@ blockquote {
 }
 
 .rbc-toolbar {
-  font-family: 'Architects Daughter', cursive;
-  color: rgba(96, 125, 255, 0.795);
+  font-family: 'Raleway, san-serif';
+  font-weight: 500;
+  color: #7bd1b8;
+  text-shadow: 2px 1px 4px #3e6c61;
 }
 
 a {
@@ -45,26 +50,49 @@ a {
   font-weight: 500;
 }
 .rbc-header {
-  height: 50px;
-  font-family: 'Architects Daughter', cursive;
-  border-radius: 25px;
-  background-color: rgba(96, 125, 255, 0.795);
+  border: #ccfcee 3px solid;
+  border-radius: 20px;
+  background-color: #7bd1b8;
+  color: #3e6c61;
+  font-weight: bolder;
+  font-family: 'Raleway', sans-serif;
 }
 
 .rbc-btn-group > button {
   border-radius: 25px;
+  background-color: #7bd1b8;
+  border: #ccfcee 3px solid;
+  color: #ccfcee;
+  font-weight: bolder;
+  font-family: 'Raleway', sans-serif;
 }
 .rbc-toolbar button.rbc-active {
-  background-color: rgba(96, 125, 255, 0.795);
-  color: white;
+  background-color: #ccfcee;
+  color: #3e6c61;
+  border: #7bd1b8 3px solid;
 }
 .rbc-off-range-bg {
-  background-color: rgba(126, 124, 248, 0.637);
+  background-color: #f85f2875;
 }
 .rbc-date-cell .a,
 .rbc-off-range {
   color: white;
 }
+
+.rbc-event {
+  background-color: #ccfcee;
+  color: #3e6c61;
+  border: #7bd1b8 3px solid;
+  border-radius: 20px;
+}
+
+.rbc-day-bg.rbc-today {
+  background-color: #e1321ba4;
+}
+
+// .rbc-day-bg {
+//   border: #ccfcee 3px solid;
+// }
 
 // Add New Event Page
 .newEventFlex {

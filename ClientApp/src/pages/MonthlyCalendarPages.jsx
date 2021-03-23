@@ -5,10 +5,10 @@ import { MyCalendar } from '../components/MyCalendar'
 export function MonthlyCalendarPages() {
   return (
     <>
-      <header className="monthly-giggles">
-        <button>
+      <header className="addEventBIG">
+        <div id="addEventBIG">
           <Link to="/addnewevent">Add Event</Link>
-        </button>
+        </div>
       </header>
       <MyCalendar />
     </>
