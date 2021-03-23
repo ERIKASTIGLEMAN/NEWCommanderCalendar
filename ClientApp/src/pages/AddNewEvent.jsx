@@ -44,66 +44,62 @@ export function AddNewEvent() {
   // const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 
   return (
-    <div className="AddNewEvent">
-      <header className="newEvent">
-        <Link to="/">
-          <i className="far fa-times-circle"></i>{' '}
-        </Link>
+    <div className="newEventFlex">
+      <span className="AddNewEvent">
+        <header className="newEventHeader">
+          <Link to="/">
+            <i className="far fa-times-circle"></i>{' '}
+          </Link>
+        </header>
+        <section id="event">
+          <h1 className="titleLabel">New Event</h1>
 
-        <h1>New Event</h1>
-      </header>
-      <br></br>
-      <form>
-        {errorMessage === '' ? '' : <p className="error">{errorMessage}</p>}
-        <input
-          id="NewEventh1"
-          type="text"
-          name="eventName"
-          placeholder="Create a life event..."
-          value={newEvent.eventName}
-          onChange={handleAllFieldChanges}
-        />
+          <br></br>
+          <form className="eventForm">
+            {errorMessage === '' ? '' : <p className="error">{errorMessage}</p>}
+            <input
+              id="NewEventh1"
+              type="text"
+              name="eventName"
+              placeholder="Create a life event..."
+              value={newEvent.eventName}
+              onChange={handleAllFieldChanges}
+            />
 
-        {/* <h3 id="AllDayEvent">All DAY</h3>
-        <p className="Y">
-          <label htmlFor="Y">YES</label>
-          <input type="radio" />
-        </p>
-        <p>
-          <label htmlFor="N">NO</label>
-          <input type="radio" />
-        </p> */}
+            <label id="StartTime">Starts</label>
+            <input
+              type="datetime-local"
+              // dateFormat={dateFormat}
+              name="eventDateTime"
+              value={newEvent.eventDateTime}
+              onChange={handleAllFieldChanges}
+            />
 
-        <label id="StartTime">Starts</label>
-        <input
-          type="datetime-local"
-          // dateFormat={dateFormat}
-          name="eventDateTime"
-          value={newEvent.eventDateTime}
-          onChange={handleAllFieldChanges}
-        />
+            <label id="Type Of Event">Type of Event</label>
+            <select
+              name="typeOfEvent"
+              value={newEvent.typeOfEvent}
+              onChange={handleAllFieldChanges}
+            >
+              <option value="Daily">Daily</option>
+              <option value="Sports">Sports</option>
+              <option value="Holiday">Holiday</option>
+            </select>
 
-        <label id="Type Of Event">Type of Event</label>
-        <select
-          name="typeOfEvent"
-          value={newEvent.typeOfEvent}
-          onChange={handleAllFieldChanges}
-        >
-          <option value="Daily">Daily</option>
-          <option value="Sports">Sports</option>
-          <option value="Holiday">Holiday</option>
-        </select>
+            <label id="notes">Notes</label>
+            <textarea
+              name="notes"
+              value={newEvent.notes}
+              onChange={handleAllFieldChanges}
+            ></textarea>
 
-        <label id="notes">Notes</label>
-        <textarea
-          name="notes"
-          value={newEvent.notes}
-          onChange={handleAllFieldChanges}
-        ></textarea>
-
-        <label id="save" />
-        <button onClick={handleFormSubmit}>SAVE</button>
-      </form>
+            <label />
+            <button id="save" onClick={handleFormSubmit}>
+              SAVE
+            </button>
+          </form>
+        </section>
+      </span>
     </div>
   )
 }
