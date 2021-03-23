@@ -84,7 +84,11 @@ form {
   justify-content: center;
   background-color: #ccfcee;
   border: #7bd1b8 6px solid;
+  border-radius: 20px;
   width: fit-content;
+}
+.newEventHeader {
+  margin: 5px 3px;
 }
 
 #event {
@@ -96,11 +100,6 @@ form {
   text-align: center;
   color: #f85e28;
   text-shadow: 2px 1px 4px #3e6c61;
-}
-
-.eventName {
-  height: 0.5in;
-  border: solid black;
 }
 
 .far {
@@ -116,6 +115,7 @@ form {
 #save {
   margin-top: 1.5rem;
   border: #e1331b 3px solid;
+  border-radius: 20px;
   background-color: #f85e28;
   color: aliceblue;
   font-weight: bolder;
@@ -205,26 +205,25 @@ p {
 
 // Edit Event
 .editEventDiv {
-  border: 4px coral solid;
-  padding: 1rem;
-  background-color: #ccfcee;
-}
-.editEvent {
   display: flex;
-  justify-content: space-between;
-  height: fit-content;
+  justify-content: center;
 }
 
-.editX {
-  height: fit-content;
+.editEvent {
+  margin: 5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #ccfcee;
+  border: #7bd1b8 6px solid;
+  border-radius: 20px;
   width: fit-content;
-  background-color: cyan;
-  > a {
-    font-size: 25px;
-    color: black;
-    font-weight: bolder;
-  }
 }
-.h1edit {
-  padding-right: 22rem;
+.editX {
+  margin: 5px 3px;
+}
+
+#eEvent {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem 3rem 1rem;
 }

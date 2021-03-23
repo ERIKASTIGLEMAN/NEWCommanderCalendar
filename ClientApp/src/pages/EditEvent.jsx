@@ -56,64 +56,61 @@ export function EditEvent() {
 
   return (
     <div className="editEventDiv">
-      <header className="editEvent">
-        <button className="editX">
-          <Link to="/">X</Link>
-        </button>
-        <h1 className="h1edit">{newEvent.eventName}</h1>
-      </header>
-      <br></br>
-      <form className="edit">
-        {errorMessage && <p className="error">{errorMessage}</p>}
-        <input
-          id="EditEvent"
-          type="text"
-          name="eventName"
-          placeholder="Create a life altering event..."
-          value={newEvent.eventName}
-          onChange={handleAllFieldChanges}
-        />
+      <span className="editEvent">
+        <header className="editX">
+          <Link to="/">
+            <i className="far fa-times-circle"></i>
+          </Link>
+        </header>
+        <section id="eEvent">
+          <h1 className="titleLabel">{newEvent.eventName}</h1>
+          <br></br>
 
-        {/* <h3 id="AllDayEvent">All DAY</h3>
-        <p className="Y">
-          <label htmlFor="Y">YES</label>
-          <input type="radio" />
-        </p>
-        <p>
-          <label htmlFor="N">NO</label>
-          <input type="radio" />
-        </p> */}
+          <form className="editId">
+            {errorMessage && <p className="error">{errorMessage}</p>}
+            <input
+              id="EditEvent"
+              type="text"
+              name="eventName"
+              placeholder="Create a life altering event..."
+              value={newEvent.eventName}
+              onChange={handleAllFieldChanges}
+            />
 
-        <label id="StartTime">Starts</label>
-        <input
-          type="datetime-local"
-          // dateFormat={dateFormat}
-          name="eventDateTime"
-          value={newEvent.eventDateTime}
-          onChange={handleAllFieldChanges}
-        />
+            <label id="StartTime">Starts</label>
+            <input
+              type="datetime-local"
+              // dateFormat={dateFormat}
+              name="eventDateTime"
+              value={newEvent.eventDateTime}
+              onChange={handleAllFieldChanges}
+            />
 
-        <label id="Type Of Event">Type of Event</label>
-        <select
-          name="typeOfEvent"
-          value={newEvent.typeOfEvent}
-          onChange={handleAllFieldChanges}
-        >
-          <option value="Daily">Daily</option>
-          <option value="Sports">Sports</option>
-          <option value="Holiday">Holiday</option>
-        </select>
+            <label id="Type Of Event">Type of Event</label>
+            <select
+              name="typeOfEvent"
+              value={newEvent.typeOfEvent}
+              onChange={handleAllFieldChanges}
+            >
+              <option value="Daily">Daily</option>
+              <option value="Sports">Sports</option>
+              <option value="Holiday">Holiday</option>
+            </select>
 
-        <label id="notes">Notes</label>
-        <textarea
-          name="notes"
-          value={newEvent.notes}
-          onChange={handleAllFieldChanges}
-        ></textarea>
+            <label id="notes">Notes</label>
+            <textarea
+              name="notes"
+              value={newEvent.notes}
+              onChange={handleAllFieldChanges}
+            ></textarea>
 
-        <label id="save" />
-        <button onClick={handleFormSubmit}>SAVE</button>
-      </form>
+            <label />
+            <button id="save" onClick={handleFormSubmit}>
+              SAVE
+            </button>
+          </form>
+        </section>
+      </span>
     </div>
   )
 }
