@@ -3,10 +3,11 @@
 > This calendar app demonstrates the skills acquired, while attending SDG Full Stack BootCamp, in just 3 months! This assignment uses the React Big Calendar template to create a CRUD base application.
 
 <hr>
-![](./ClientApp/src/pictures/herokusuccess.jpg)
+![Heroku Shield](./READMEImages/HerokuSuccess.jpg)
 
-![Calendar Picture](./ClientApp/src/pictures/CalendarREADMEPhoto.jpg)
+![Calendar Picture](./READMEImages/CalendarREADMEPhoto.jpg)
 
+<hr>
 Visit Life's BIG Calendar live @:
 
 https://lifes-big-calendar-capstone.herokuapp.com/
@@ -14,7 +15,7 @@ https://lifes-big-calendar-capstone.herokuapp.com/
 Technologies used:
 
 - Back End:
-  - using C# to build API
+  - C# to build API
   - LINQ and Entity Framework
 - Front End:
   - Javascript
