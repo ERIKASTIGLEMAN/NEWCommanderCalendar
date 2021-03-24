@@ -1,17 +1,21 @@
-# Life's BIG Calendar
+# <span style="color:turquoise">Life's BIG Calendar
 
 > This calendar app demonstrates the skills acquired, while attending SDG Full Stack BootCamp, in just 3 months! This assignment uses the React Big Calendar template to create a CRUD base application.
 
 <hr>
-![Heroku Shield](./READMEImages/HerokuSuccess.jpg)
 
-![Calendar Picture](./READMEImages/CalendarREADMEPhoto.jpg)
+<!-- ![Heroku](.READMEImages/herokusuccess.jpg) -->
+
+![Calendar Picture](./READMEImages/CalendarREADMEVideo.gif)
 
 <hr>
 Visit Life's BIG Calendar live @:
 
 https://lifes-big-calendar-capstone.herokuapp.com/
 
+<span style="font-size:9px;"> Use Chrome Browser for best viewing</span>
+
+<br>
 Technologies used:
 
 - Back End:
