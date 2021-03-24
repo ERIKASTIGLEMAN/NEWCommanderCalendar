@@ -2,7 +2,7 @@
 
 This calendar app demonstrates the skills acquired in just 3 months! This assignment uses the React Big Calendar template to create a CRUD base application.
 
-![alt text](https://photos.app.goo.gl/DqNaYXce9nAyNuY58 "Life's BIG Calendar")
+![Calendar Picture](./ClientApp/src/pictures/CalendarREADMEPhoto.jpg)
 
 Visit Life's BIG Calendar live @:
 
