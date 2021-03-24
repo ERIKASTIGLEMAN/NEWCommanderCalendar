@@ -1,6 +1,9 @@
 # Life's BIG Calendar
 
-This calendar app demonstrates the skills acquired in just 3 months! This assignment uses the React Big Calendar template to create a CRUD base application.
+> This calendar app demonstrates the skills acquired, while attending SDG Full Stack BootCamp, in just 3 months! This assignment uses the React Big Calendar template to create a CRUD base application.
+
+<hr>
+![](./ClientApp/src/pictures/herokusuccess.jpg)
 
 ![Calendar Picture](./ClientApp/src/pictures/CalendarREADMEPhoto.jpg)
 
