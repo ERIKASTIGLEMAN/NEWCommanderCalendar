@@ -3,6 +3,10 @@
 > This calendar app demonstrates the skills acquired, while attending SDG Full Stack BootCamp, in just 3 months! This assignment uses the React Big Calendar template to create a CRUD base application.
 
 <hr>
+<<<<<<< HEAD
+=======
+
+>>>>>>> be193d9 (Update README.md)
 
 <!-- ![Heroku](.READMEImages/herokusuccess.jpg) -->
 
