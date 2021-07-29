@@ -33,3 +33,5 @@ Note:
   - clicking on date to create event
   - event color associations
   - including additional images and icons
+
+<br>
